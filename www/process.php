@@ -13,11 +13,15 @@ function red($html) {
 	return "<font color='#F88'>" . $html . "</font>";
 }
 
-echo "Processing file ...";
+
+$filename = $_GET['filename'];
+// TODO : escape unwanted chars
+$file = '/var/www/uploads/'.$filename;
+
+echo "Processing '$filename' ...";
 echo "<br>";flush_buffers();
 
 // Simulates long processing...
-usleep(2*1000000);
 
 echo "Step 1/2 ";
 $i=0;
@@ -33,6 +37,16 @@ while ($i++<5) {
 	echo ".";flush_buffers();
 	usleep(1000000);
 }
+echo "<br>";
+
+
+
+if (unlink($file)) {
+	echo "File removed successfully.";
+} else {
+	echo red("Error removing file !");
+}
+
 echo "<br>";
 
 echo "Done.";

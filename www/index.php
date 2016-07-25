@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -12,7 +13,7 @@
 <!--  Step 1 : Dropzone -->
 
   <div id="my-dropzone" class="dropzone"></div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="dropzone.js"></script>
 	<script>
 	var myDropzone;
@@ -34,7 +35,7 @@
 	$(function() {
 		var totalFiles = 0, completeFiles = 0, files = '';
     myDropzone = new Dropzone('#my-dropzone', {
-      url: "upload.php?username=<?= $_GET['username'] ?>&topic_id=<?= $_GET['topic_id'] ?>",
+      url: "upload.php?username=<?= $_GET['username'] ?>",
       clickable: true,
       uploadMultiple: false,
 	  maxFiles: 1
@@ -49,7 +50,6 @@
 	  goProcessState();
 	  processingState(msg);
     }).on('complete', function (file) {
-	console.log("complete");
       completeFiles += 1;
       if (completeFiles === totalFiles) {}
     })
@@ -109,7 +109,8 @@ function ShowProgress(input) {
   
   function processingState( msg ) {
     $('#my-processing').show();
-	loadProgress("process.php?hash="+msg.hash);
+	console.log(msg);
+	loadProgress("process.php?filename="+msg.filename);
   }
   </script>
 

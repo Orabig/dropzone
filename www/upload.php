@@ -29,10 +29,9 @@ if (!empty($_FILES)) {
     move_uploaded_file($tempFile, $targetFile);
 
     echo json_encode(array(
-      'name'  => $file_name,
+      'filename'  => $file_name,
       'hash'  => $hashing
     ));
-	return "CACA";
   }
 } else {
   return 'File is empty.';

@@ -1,0 +1,8 @@
+/* The MIT License */
+.processing{
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(0,0,0,0.02);
+  padding: 1em;
+  margin: 1em 0;
+}

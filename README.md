@@ -1,7 +1,7 @@
 Dropzone Upload and server-side Processing
 ==========================================
 
-This is a demo project, based on the very good [http://www.dropzonejs.com/](dropzoneJS) project.
+This is a demo project, based on the very good [dropzoneJS](http://www.dropzonejs.com/) project.
 
 The aim is to have a very simple page which can :
 * accept drag&drop of files

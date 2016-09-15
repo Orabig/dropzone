@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/orabig/dropzone.svg)](https://microbadger.com/images/orabig/dropzone)
+
 Dropzone Upload and server-side Processing
 ==========================================
 

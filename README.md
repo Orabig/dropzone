@@ -11,3 +11,7 @@ The aim is to have a very simple page which can :
 * show server-side processing in real-time, with a nice report output.
  
 A live demo is available [HERE](http://gandalf.crocoware.com:9181/)
+
+Here is a sumary of the different steps :
+
+![UML Sequence diagram](doc/UML-sequence.png)
